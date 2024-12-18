@@ -27,6 +27,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <div className=" p-4 w-full h-12 flex justify-left   bg-slate-100 pt-2 ">
+        Medium Website 
+         </div>
         {children}
       </body>
     </html>
