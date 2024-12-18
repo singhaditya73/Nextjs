@@ -1,7 +1,12 @@
-export default function Home() {
+import axios from "axios";
+
+
+
+export default async function Home() {
+
   return (
     <div>
-      hello there!
+      hii there!
     </div>
   );
 }
