@@ -5,7 +5,7 @@ import { ChangeEventHandler, useState } from "react";
 import { useRouter } from "next/navigation";
 
 export function Signup() {
-  const [username, setUsername] = useState("");
+  const [email, setemail] = useState("");
   const [password, setPassword] = useState("");
   const router = useRouter();
 
@@ -23,7 +23,7 @@ export function Signup() {
             <div className="pt-2">
               <LabelledInput
                 onChange={(e) => {
-                  setUsername(e.target.value);
+                  setemail(e.target.value);
                 }}
                 label="Username"
                 placeholder="aditya@gmail.com"
@@ -39,7 +39,7 @@ export function Signup() {
               <button
                 onClick={async () => {
                   await axios.post("http://localhost:3000/api/user", {
-                    username,
+                    email,
                     password,
                   });
                   router.push("/");
